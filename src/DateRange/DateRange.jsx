@@ -108,10 +108,10 @@ export default class DateRange extends React.Component {
 				/>
 				<div className="date-range__text">
 					{`Последнее изменение: ${updateDate}.${
-						updateMonth < 10 ?
-						`0${updateMonth}`
+						updateMonth < 9 ?
+						`0${updateMonth + 1}`
 						:
-						updateMonth
+						updateMonth + 1
 					}`}
 				</div>
 				{this.renderItems(this.createItems(this.createPeriod(date)))}
